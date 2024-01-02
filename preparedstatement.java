@@ -1,23 +1,23 @@
-package JDBC;
+package jdbc;
 
 import java.sql.*;
 
 public class preparedstatement {
-    public static void main(String[] args) {
 
-        String url = "jdbc:mysql://localhost:3306/db";
-        String username = "user";
-        String password = "password";
 
-        try(Connection connection = DriverManager.getConnection(url,username,password)){
 
-            String query = "SELECT * FROM EMP WHERE EMPNO = ?";
+   public static final String query = "SELECT * FROM EMP WHERE EMPNO = ?";
 
-            try(PreparedStatement preparedstatement = connection.prepareStatement(query)){
 
-                preparedstatement.setString(1,"7521");
 
-                try(ResultSet resultSet = preparedstatement.executeQuery()){
+    public static void main(String[] args) throws SQLException {
+        addData();
+    }
+
+    public static void addData() throws SQLException {
+         PreparedStatement preparedStatement = databaseconnection.getPreparedStatement(query);
+         preparedStatement.setString(1,"7521");
+                try(ResultSet resultSet = preparedStatement.executeQuery()){
 
                     while (resultSet.next()) {
                         int id = resultSet.getInt("empno");
@@ -27,9 +27,4 @@ public class preparedstatement {
                     }
                 }
             }
-
-        } catch (SQLException e){
-            e.printStackTrace();
-        }
     }
-}
