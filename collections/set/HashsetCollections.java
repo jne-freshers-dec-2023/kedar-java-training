@@ -2,7 +2,7 @@ package collections.set;
 
 import java.util.HashSet;
 
-public class hashsetcollections {
+public class HashsetCollections {
     public static void main(String[] args) {
 
         HashSet<Integer> numberSet = new HashSet<>();

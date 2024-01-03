@@ -1,9 +1,8 @@
 package collections.queue;
 
 import java.util.PriorityQueue;
-import java.util.Queue;
 
-public class prioritycollection {
+public class PriorityCollection {
     public static void main(String[] args) {
 
         PriorityQueue<Integer> numberSet = new PriorityQueue<>();

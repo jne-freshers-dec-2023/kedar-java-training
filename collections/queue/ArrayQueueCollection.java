@@ -2,7 +2,7 @@ package collections.queue;
 
 import java.util.ArrayDeque;
 
-public class arrayqueuecollection {
+public class ArrayQueueCollection {
     public static void main(String[] args) {
 
         ArrayDeque<String> colors = new ArrayDeque<>();

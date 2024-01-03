@@ -1,9 +1,8 @@
 package collections.list;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 
-public class linkedlistcollection {
+public class LinkedListCollection {
     public static void main(String[] args) {
 
         LinkedList<String> fruits = new LinkedList<>();

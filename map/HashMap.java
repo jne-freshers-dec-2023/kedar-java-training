@@ -1,13 +1,12 @@
 package map;
 
-import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-public class hashmap {
+public class HashMap {
     public static void main(String[] args) {
 
-        HashMap<Integer,String> countrys = new HashMap<>();
+        java.util.HashMap<Integer,String> countrys = new java.util.HashMap<>();
 
         countrys.put(1,"India");
         countrys.put(1,"USA");
@@ -22,5 +21,18 @@ public class hashmap {
         System.out.println(resultSet);
        countrys.forEach((k,v) -> System.out.println("Keys : " + k + " Value : " + v));
 
+
+       countrys.remove(1);
+       System.out.println("After Removing Key 1 :"+countrys);
+
+        System.out.println("Size of Map : "+countrys.size());
+
+        System.out.println("Values : "+ countrys.values());
+
+        countrys.replace(4,"Brazil");
+        System.out.println("After Replacing : "+ countrys);
+
+        countrys.clear();
+        System.out.println("HAshMap after clearing");
     }
 }
