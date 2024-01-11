@@ -5,7 +5,9 @@
                     
                     public static void main(String args[]){
                      
-                     Dog dog = new Dog();
-                     dog.sound();
+                     Animal Obj1 = new Animal();
+                     Animal Obj2 = new Dog();
+                     Obj1.sound();
+                     Obj2.sound();
                      }
                      } 
